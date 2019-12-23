@@ -1,0 +1,39 @@
+!#URXVT settings
+!#Rxvt*background: black
+!#Rxvt*foreground: white
+URxvt.font: xft:Hack:size=14
+urxvt.perl-ext-common: default, resize-font
+
+!#URXVT colors:
+URxvt.background: #1c1c1c
+URxvt.foreground: white
+! black
+URxvt.color0:  #1c1c1c
+URxvt.color8:  #3e5755
+! red
+URxvt.color1:  #FFA384
+URxvt.color9:	 #fa8072
+! green
+URxvt.color2:	 #3D5B59
+URxvt.color10: #B5E5CF
+! yellow 
+URxvt.color3:  #FBBC54
+URxvt.color11: #edc480
+! blue
+URxvt.color4:  #313E61
+URxvt.color12: #81ABBC
+! magenta
+URxvt.color5:  #99545d
+URxvt.color13: #b99095
+! cyan
+URxvt.color6:  #74BDCB
+URxvt.color14: #5ee0e0
+! white
+URxvt.color7:  #ddede6
+URxvt.color15: #e6edea
+
+!#DISABLE DE Scrollbar:
+URxvt.scrollBar: false
+!#Background with feh:
+
+!# Perl Extensions:
