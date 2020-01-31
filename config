@@ -1,4 +1,8 @@
 set $mod Mod4
+
+#set keyboard layout to finnish:
+exec --no-startup-id "setxkbmap -layout fi"
+
 #Set cool colors
 #CLIENT						BORDER	BACKGR.	 TEXT	   INDICATOR	CHILD_BORDER
 client.focused	 	#b5e5fc #1c1c1c #ffffff  #81ABBC		#B5E5CF
@@ -8,8 +12,8 @@ client.background				#ffffff
 #merge xrdb on startup
 #exec --no-startup-id xrdb -merge ~/.Xresources
 
-#solid color for bg:
-exec --no-startup-id xsetroot -solid "#3D5B59"
+#set feh background to last ran fehbg picture:
+exec --no-startup-id "sh .fehbg"
 
 #disable titlebars (and create thicc borders)
 for_window [class="^.*"] border pixel 15
@@ -29,7 +33,7 @@ bindsym $mod+q kill
 # start dmenu (a program launcher)
 bindsym $mod+Tab exec rofi -show drun
 
-#bindsym $mod+d exec --no-startup-id dmenu_run
+#bindsym $mod+Tab exec --no-startup-id dmenu_run
 
 # change focus
 bindsym $mod+h focus left
@@ -158,10 +162,19 @@ bindsym $mod+r mode "resize"
 bar {
 			position top
       status_command i3status
+			
+			#change the font and fontsize of i3bar
+			font -misc-fixed-*-r-normal--18-120-100-100-c-90-iso10646-1
+			font pango: Hack 12
 
 			colors {
-
-				background #304241
+				
+				separator  					#99545d
+				background 					#1c1c1c
+				focused_workspace		#b5e5cf #b5e5cf #1c1c1c
+				active_workspace		#313e61	#1c1c1c	#1c1c1c
+				inactive_workspace	#1c1c1c	#1c1c1c	#ffffff
+				urgent_workspace 		#b99095	#b99095	#1c1c1c
 
 			}
 }
@@ -177,5 +190,5 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle #toggle mute
 
 #Screen brightness:
-#bindsym XF86MonbrigthnessUp exec xbacklight -inc 20 #increase brightness
-#bindsym XF86MonbrigthnessDown exec xbacklight -dec 20 #decrease brightness
+bindsym XF86MonbrigthnessUp exec "" #increase brightness (virtual)
+bindsym XF86MonbrigthnessDown exec "" #decrease brightness (virtual)
