@@ -1,8 +1,12 @@
 !#URXVT settings
 !#Rxvt*background: black
 !#Rxvt*foreground: white
+
+!# Set rxvt font
 URxvt.font: xft:Hack:size=14
-urxvt.perl-ext-common: default, resize-font
+
+!#DISABLE THAT FUCKING BELL
+URxvt.visualBell: true
 
 !#URXVT colors:
 URxvt.background: #1c1c1c
@@ -32,8 +36,10 @@ URxvt.color14: #5ee0e0
 URxvt.color7:  #ddede6
 URxvt.color15: #e6edea
 
-!#DISABLE DE Scrollbar:
+!#DISABLE rxvt-unicode's Scrollbar:
 URxvt.scrollBar: false
-!#Background with feh:
+
+!# IMPORTANT!! set X backlight property to /sys/class/intel_backlight
 
 !# Perl Extensions:
+URxvt.perl-ext-common: default, resize-font
