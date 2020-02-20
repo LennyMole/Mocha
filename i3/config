@@ -1,11 +1,21 @@
 set $mod Mod4
 
+#GET THOSE FUCKING GAPS YOU SPENT 2 HOURS OF YOUR LIFE BUILDING FROM SOURCE
+gaps inner 12
+gaps outer 10
+
+#compton for shadows
+exec compton
+
+#screenshots
+bindsym Print exec "scrot /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'" 
+
 #set keyboard layout to finnish:
 exec --no-startup-id "setxkbmap -layout fi"
 
 #Set cool colors
 #CLIENT						BORDER	BACKGR.	 TEXT	   INDICATOR	CHILD_BORDER
-client.focused	 	#b5e5fc #1c1c1c #ffffff  #81ABBC		#B5E5CF
+client.focused	 	#b5e5cf #1c1c1c #ffffff  #81abbc		#b5e5cf
 
 client.background				#ffffff
 
@@ -16,7 +26,7 @@ client.background				#ffffff
 exec --no-startup-id "sh .fehbg"
 
 #disable titlebars (and create thicc borders)
-for_window [class="^.*"] border pixel 15
+for_window [class="^.*"] border pixel 12
 
 #font for i3bar and stuff
 font pango:monospace 12
@@ -24,8 +34,8 @@ font pango:monospace 12
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal (urxvt)
-bindsym $mod+Return exec urxvt
+# start a terminal (kitty)
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+q kill
