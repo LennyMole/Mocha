@@ -53,7 +53,7 @@ filetype plugin on
 "//YCM specific
 
 "close preview after autocompletion
-"let g:ycm_autoclose_preview_window_after_insertion=1
+let g:ycm_autoclose_preview_window_after_insertion=1
 
 "//
 
@@ -77,6 +77,7 @@ set wrap												"wrap lines
 set mouse=v											"set mouse on visual-mode only
 set visualbell									"no beeps ffs
 set hlsearch										"set highlighted search
+set noswapfile 									"no swapfiles
 
 "//syntax on
 syntax on
