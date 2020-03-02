@@ -27,7 +27,7 @@ primary = #B5E5CF
 secondary = #3d5b59
 alert = #fa8072
 
-[bar/top_bar]
+[bar/top-bar]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 30
@@ -35,12 +35,14 @@ height = 30
 ;offset-y = 1%
 radius = 0
 
+; enable ipc messaging
+enable-ipc = true
+
 ; Does center move when 
 fixed-center = true
 
 background = ${colors.background}
-foreground = ${colors.foreground}
-
+foreground = ${colors.foreground} 
 line-size = 5
 line-color = #f00
 
@@ -53,13 +55,16 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = hack:pixelsize=11;1
-font-1 = unifont:fontformat=truetype:size=11:antialias=false;0
-font-2 = hack:pixelsize=11;1
+;font-0 = hack:pixelsize=10;1
+font-0 = FontAwesome5Free:style=Solid:size=11;4
+;font-1 = unifont:fontformat=truetype:size=10:antialias=false;0
+font-1 = FontAwesome5Free:style=Regular:size11;4
+;font-2 = hack:pixelsize=10;1
+font-2 = FontAwesome5Brands:style=Regular:size=11;4
 
-modules-left = 
+modules-left = xkeyboard
 modules-center = i3
-modules-right = filesystem xbacklight pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = pulseaudio wlan eth battery temperature date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -230,11 +235,10 @@ format-connected = <ramp-signal> <label-connected>
 format-connected-underline = #9f78e1
 label-connected = %essid%
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+format-disconnected = <label-disconnected>
+format-disconnected-underline = ${self.format-connected-underline}
+label-disconnected = %ifname% disconnected
+label-disconnected-foreground = ${colors.foreground-alt}
 
 ramp-signal-0 = 
 ramp-signal-1 = 
@@ -417,10 +421,10 @@ screenchange-reload = true
 ;compositing-background = screen
 ;compositing-foreground = source
 ;compositing-border = over
-;pseudo-transparency = false
+pseudo-transparency = false
 
 [global/wm]
 margin-top = 5
 margin-bottom = 5
 
-; vim:ft=dosini
+;vim:ft=dosini

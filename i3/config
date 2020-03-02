@@ -7,6 +7,9 @@ gaps outer 10
 #compton for shadows
 exec compton
 
+#dunst for notifications
+exec dunst
+
 #screenshots
 bindsym Print exec "scrot /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'" 
 
@@ -139,14 +142,49 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+# MOVE FLOATING WINDOW WITH CUSTOM MODE!
+bindsym $mod+m mode "move" focus floating
+mode "move" {
+
+	#move distance
+	set $distance 30
+	set $empowered_distance 90
+
+	#move
+	bindsym l							move right $distance px
+	bindsym k							move up $distance px
+	bindsym j							move down $distance px
+	bindsym h							move left $distance px
+	
+	bindsym Right 				move right $distance px
+	bindsym Up						move up $distance px
+	bindsym Down					move down $distance px
+	bindsym Left					move left $distance px
+	
+	#empowered move
+	bindsym Shift+l				move right $empowered_distance px
+	bindsym Shift+k 			move up $empowered_distance px
+	bindsym Shift+j				move down $empowered_distance px
+	bindsym Shift+h 			move left $empowered_distance px
+
+	bindsym Shift+Right 	move right $empowered_distance px
+	bindsym Shift+Up 			move up $empowered_distance px
+	bindsym Shift+Down		move down $empowered_distance px
+	bindsym Shift+Left 		move left $empowered_distance px
+
+	#back to normal mode
+	bindsym Escape mode "default"
+	bindsym Return mode "default"
+	bindsym $mod+m mode "default"
+	bindsym Space  mode "default"
+
+}
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
+				set $empowered_amount 50
+
         bindsym h resize shrink width 10 px or 10 ppt
         bindsym j resize grow height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
@@ -157,6 +195,12 @@ mode "resize" {
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
+
+				# empowered resize:
+				bindsym Shift+h resize shrink width $empowered_amount px
+				bindsym Shift+j resize grow height $empowered_amount px
+				bindsym Shift+k resize shrink height $empowered_amount px
+				bindsym Shift+l resize grow width $empowered_amount px
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
