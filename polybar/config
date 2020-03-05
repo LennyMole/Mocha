@@ -234,8 +234,9 @@ interface = wlp5s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-;format-connected-underline = #fbbc54
+format-connected-underline = #b5e5cf
 label-connected = %essid%
+;label-connected-background = #3e5755
 
 format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
@@ -341,6 +342,7 @@ type = internal/battery
 battery = BAT0
 adapter = AC
 full-at = 98
+low-at = 20
 
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = #81abbc
@@ -351,6 +353,8 @@ format-discharging = <animation-discharging> <label-discharging>
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = #b5e5cf
+
+label-low-foreground = #fa8072
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -377,11 +381,11 @@ warn-temperature = 60
 format = <ramp> <label>
 format-underline = #1c1c1c
 format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
+format-warn-label= #fa8072
 
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
+label-warn-foreground = #fa8072
 
 ramp-0 = 
 ramp-1 = 

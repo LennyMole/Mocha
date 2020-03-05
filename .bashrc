@@ -121,3 +121,4 @@ alias suspend='systemctl suspend'
 
 #alias for bashpipes
 alias pipes='bash $HOME/pipes.sh/pipes.sh'
+
