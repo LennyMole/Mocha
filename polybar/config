@@ -35,10 +35,15 @@ height = 30
 ;offset-y = 1%
 radius = 0
 
+;separator between modules
+separator = "|"
+separator-padding = 0
+separator-foreground = ${colors.foreground-alt}
+
 ; enable ipc messaging
 enable-ipc = true
 
-; Does center move when 
+; Does center move 
 fixed-center = true
 
 background = ${colors.background}
@@ -55,18 +60,15 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-;font-0 = hack:pixelsize=10;1
-font-0 = FontAwesome5Free:style=Solid:size=11;4
-;font-1 = unifont:fontformat=truetype:size=10:antialias=false;0
-font-1 = FontAwesome5Free:style=Regular:size11;4
-;font-2 = hack:pixelsize=10;1
-font-2 = FontAwesome5Brands:style=Regular:size=11;4
+font-0 = Bitstream Vera Sans:pixelsize=12;1
+font-1 = unifont:fontformat=truetype:size=13:antialias=false;0
+font-2 = hack:pixelsize=13;1
 
 modules-left = xkeyboard
 modules-center = i3
 modules-right = pulseaudio wlan eth battery temperature date powermenu
 
-tray-position = right
+tray-position = left
 tray-padding = 2
 ;tray-background = #0063ff
 
@@ -141,6 +143,7 @@ type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
+strip-wsnumbers = true
 
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
@@ -150,30 +153,29 @@ label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
+label-focused = %name%
 label-focused-background = ${colors.background-alt}
 label-focused-foreground = ${colors.foreground-alt}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = %name%
 label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = %name%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = %name%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
 ; Separator in between workspaces
 ; label-separator = |
-
 
 [module/mpd]
 type = internal/mpd
@@ -223,20 +225,20 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
+format-underline = #ffa384
 label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlx503eaa55ff3c
+interface = wlp5s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
+;format-connected-underline = #fbbc54
 label-connected = %essid%
 
 format-disconnected = <label-disconnected>
-format-disconnected-underline = ${self.format-connected-underline}
+;format-disconnected-underline = ${self.format-connected-underline}
 label-disconnected = %ifname% disconnected
 label-disconnected-foreground = ${colors.foreground-alt}
 
@@ -252,7 +254,7 @@ type = internal/network
 interface = enp4s0
 interval = 3.0
 
-format-connected-underline = #55aa55
+;format-connected-underline = #55aa55
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
@@ -275,7 +277,7 @@ time-alt = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+;format-underline = #81abbc
 
 label = %date% %time%
 
@@ -341,14 +343,14 @@ adapter = AC
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+format-charging-underline = #81abbc
 
 format-discharging = <animation-discharging> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+;format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+format-full-underline = #b5e5cf
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -373,7 +375,7 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = #f50a4d
+format-underline = #1c1c1c
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
