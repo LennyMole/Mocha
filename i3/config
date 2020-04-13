@@ -1,5 +1,8 @@
 set $mod Mod4
 
+#bind $mod+esc to shutdown dmenu
+bindsym $mod+Escape exec --no-startup-id "bash ~/.config/shutdown.bash"
+
 #GET THOSE FUCKING GAPS YOU SPENT 2 HOURS OF YOUR LIFE BUILDING FROM SOURCE
 gaps inner 12
 gaps outer 10
@@ -12,6 +15,7 @@ exec dunst
 
 #screenshots
 bindsym Print exec "scrot /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'" 
+bindsym --release Shift+$mod+s exec "gnome-screenshot -a"
 
 #set keyboard layout to finnish:
 exec --no-startup-id "setxkbmap -layout fi"
@@ -100,16 +104,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws1 "1: α"
+set $ws2 "2: β"
+set $ws3 "3: γ"
+set $ws4 "4: δ"
+set $ws5 "5: ε"
+set $ws6 "6: ζ"
+set $ws7 "7: η"
+set $ws8 "8: θ"
+set $ws9 "9: ι"
+set $ws10 "10: κ"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -218,22 +222,22 @@ exec_always --no-startup-id $HOME/.config/polybar/launch_polybar.sh
 
 # finds out, if available)
 #bar {
-#			position top
+#			position bottom
 #      status_command i3status
-#			
-#			#change the font and fontsize of i3bar
+			
+#			change the font and fontsize of i3bar
 #			font -misc-fixed-*-r-normal--18-120-100-100-c-90-iso10646-1
 #			font pango: Hack 12
 #
 #			colors {
-				
+#				
 #				separator  					#99545d
 #				background 					#1c1c1c
 #				focused_workspace		#b5e5cf #b5e5cf #1c1c1c
 #				active_workspace		#313e61	#1c1c1c	#1c1c1c
 #				inactive_workspace	#1c1c1c	#1c1c1c	#ffffff
 #				urgent_workspace 		#b99095	#b99095	#1c1c1c
-
+#
 #			}
 #}
 
@@ -246,6 +250,9 @@ for_window [window_role="pop-up"]			floating enable
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle #toggle mute
+
+#Toggle mute:
+bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle && amixer get Capture | grep '\[off\]' && notify-send "Microphone off" || notify-send "Microphone on"
 
 #Screen brightness:
 bindsym XF86MonbrigthnessUp exec "" #increase brightness (virtual)
