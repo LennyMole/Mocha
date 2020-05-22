@@ -13,9 +13,15 @@ exec compton
 #dunst for notifications
 exec dunst
 
+#emoji dmenu:
+bindsym $mod+o exec --no-startup-id "rofimoji"
+
+#resize by drawing region
+bindsym $mod+e --release exec --no-startup-id "bash /bin/draw-resize.sh $(xdotool getactivewindow)"
+
 #screenshots
 bindsym Print exec "scrot /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'" 
-bindsym --release Shift+$mod+s exec "gnome-screenshot -a"
+bindsym --release Shift+$mod+s exec "import /tmp/screenshot_regional.png && cat /tmp/screenshot_regional.png | xclip -selection c -t image/png -i"
 
 #set keyboard layout to finnish:
 exec --no-startup-id "setxkbmap -layout fi"
@@ -29,7 +35,7 @@ client.background				#ffffff
 #merge xrdb on startup
 #exec --no-startup-id xrdb -merge ~/.Xresources
 
-#set feh background to last ran fehbg picture:
+#background:
 exec --no-startup-id "sh .fehbg"
 
 #disable titlebars (and create thicc borders)
@@ -88,7 +94,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+# bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle

@@ -1,0 +1,5 @@
+[Allow all users to restart]
+Identity=unix-user:*
+Action=org.freedesktop.consolekit.system.reboot-multiple-sessions
+ResultInactive=no
+ResultActive=yes

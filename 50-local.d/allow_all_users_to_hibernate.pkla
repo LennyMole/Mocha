@@ -1,0 +1,5 @@
+[Allow all users to hibernate]
+Identity=unix-user:*
+Action=org.freedesktop.login1.hibernate-multiple-sessions
+ResultInactive=no
+ResultActive=yes
