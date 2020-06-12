@@ -1,0 +1,13 @@
+2020/05/22-13:33:37.701 3806 Reusing MANIFEST /home/lenny/.config/Microsoft/Microsoft Teams/IndexedDB/https_teams.microsoft.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/05/22-13:33:37.701 3806 Recovering log #17
+2020/05/22-13:33:37.717 3806 Reusing old log /home/lenny/.config/Microsoft/Microsoft Teams/IndexedDB/https_teams.microsoft.com_0.indexeddb.leveldb/000017.log 
+2020/05/22-13:33:40.773 3931 Level-0 table #23: started
+2020/05/22-13:33:40.796 3931 Level-0 table #23: 2108390 bytes OK
+2020/05/22-13:33:40.798 3931 Delete type=0 #17
+2020/05/22-13:33:41.272 3931 Compacting 1@1 + 1@2 files
+2020/05/22-13:33:41.307 3931 Generated table #24@1: 6773 keys, 2164587 bytes
+2020/05/22-13:33:41.310 3931 Generated table #25@1: 81 keys, 26091 bytes
+2020/05/22-13:33:41.310 3931 Compacted 1@1 + 1@2 files => 2190678 bytes
+2020/05/22-13:33:41.312 3931 compacted to: files[ 0 0 2 0 0 0 0 ]
+2020/05/22-13:33:41.312 3931 Delete type=2 #23
+2020/05/22-13:33:41.312 3931 Delete type=2 #20

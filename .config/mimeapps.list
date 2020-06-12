@@ -1,0 +1,6 @@
+[Added Associations]
+text/rtf=libreoffice-writer.desktop;
+application/pdf=okularApplication_pdf.desktop;
+
+[Default Applications]
+x-scheme-handler/msteams=teams.desktop
