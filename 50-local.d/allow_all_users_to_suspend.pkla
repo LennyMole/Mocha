@@ -1,5 +1,0 @@
-[Allow all users to suspend]
-Identity=unix-user:*
-Action=org.freedesktop.consolekit.system.suspend-multiple-sessions
-ResultInactive=no
-ResultActive=yes

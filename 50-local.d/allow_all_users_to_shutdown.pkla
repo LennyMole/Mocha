@@ -1,5 +1,0 @@
-[Allow all users to shutdown]
-Identity=unix-user:*
-Action=org.freedesktop.consolekit.system.power-off-multiple-sessions
-ResultInactive=no
-ResultActive=yes
