@@ -34,6 +34,8 @@ Plugin 'vim-latex/vim-latex'						"Vim LateX editor plugin
 Plugin 'lervag/vimtex'									"Syntax Highlighting for LateX
 
 Plugin 'xuhdev/vim-latex-live-preview'	"Live latex preview
+
+Plugin 'mboughaba/i3config.vim'					"i3 syntax
 "//
 
 "//End Vundle
@@ -51,6 +53,12 @@ filetype plugin on
 "let g:ycm_clang_binary_path = exepath("clang")
 
 "//YCM specific
+
+"	set automatic LaTeX completion
+if !exists('g:ycm_semantic_triggers')
+	let g:ycm_semantic_triggers = {}
+endif
+au VimEnter * let g:ycm_semantic_triggers.tex=g:vimtex#re#youcompleteme
 
 "close preview after autocompletion
 let g:ycm_autoclose_preview_window_after_insertion=1
@@ -78,6 +86,7 @@ set mouse=v											"set mouse on visual-mode only
 set visualbell									"no beeps ffs
 set hlsearch										"set highlighted search
 set noswapfile 									"no swapfiles
+set laststatus=2								"Make filenames always visible!
 
 "//syntax on
 syntax on
