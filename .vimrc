@@ -36,6 +36,10 @@ Plugin 'lervag/vimtex'									"Syntax Highlighting for LateX
 Plugin 'xuhdev/vim-latex-live-preview'	"Live latex preview
 
 Plugin 'mboughaba/i3config.vim'					"i3 syntax
+
+Plugin 'plasticboy/vim-markdown'				"vim markdown
+
+Plugin 'conornewton/vim-pandoc-markdown-preview'
 "//
 
 "//End Vundle
@@ -92,6 +96,10 @@ set laststatus=2								"Make filenames always visible!
 syntax on
 "//custom KEYBINDS
 nnoremap <SPACE> zo
+
+"// Custom visual mode tab thingie
+vmap <Tab> >gv
+vmap <S-Tab> <gv
 
 "//Python specific options:
 autocmd filetype python set ts=4 | set sw=4 | set et
