@@ -49,6 +49,7 @@ floating_modifier $mod
 
 #MAKE CERTAIN WINDOWS FLOATING BY DEFAULT
 for_window [class="SpeedCrunch"] floating enable
+for_window [class="nemo"] floating enable
 
 # start a terminal (kitty)
 bindsym $mod+Return exec kitty

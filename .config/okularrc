@@ -1,0 +1,32 @@
+[Desktop Entry]
+FullScreen=false
+
+[MainWindow]
+Height 1080=982
+MenuBar=Disabled
+ScrollBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAA4wAAAPWAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1920=1100
+
+[Recent Files]
+File1[$e]=$HOME/school/fy8/koejarjestely.dvi
+File10[$e]=$HOME/school/YH3.pdf
+File2[$e]=$HOME/school/fy8/main.dvi
+File3[$e]=$HOME/school/fy8/main.pdf
+File4[$e]=$HOME/school/FY8_limen_massan_maarittaminen_Lenni_Toikkanen.pdf
+File5[$e]=$HOME/espresso/MOSHED-2020-5-21-12-56-24.gif
+File6[$e]=$HOME/ENAR187.pdf
+File7[$e]=$HOME/ENAK137 .pdf
+File8[$e]=$HOME/YH3.pdf
+File9[$e]=$HOME/school/Bilsa/THL_tautiluokitus.pdf
+Name1[$e]=koejarjestely.dvi
+Name10[$e]=YH3.pdf
+Name2[$e]=main.dvi
+Name3[$e]=main.pdf
+Name4[$e]=FY8_limen_massan_maarittaminen_Lenni_Toikkanen.pdf
+Name5[$e]=MOSHED-2020-5-21-12-56-24.gif
+Name6[$e]=ENAR187.pdf
+Name7[$e]=ENAK137 .pdf
+Name8[$e]=YH3.pdf
+Name9[$e]=THL_tautiluokitus.pdf

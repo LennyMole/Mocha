@@ -1,0 +1,101 @@
+07:50:59 PM.744: CPU Name: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz
+07:50:59 PM.744: CPU Speed: 2327.787MHz
+07:50:59 PM.744: Physical Cores: 2, Logical Cores: 4
+07:50:59 PM.744: Physical Memory: 7881MB Total, 4889MB Free
+07:50:59 PM.744: Kernel Version: Linux 4.19.0-8-amd64
+07:50:59 PM.744: Distribution: "Debian GNU/Linux" "10"
+07:50:59 PM.745: Window System: X11.0, Vendor: The X.Org Foundation, Version: 1.20.4
+07:50:59 PM.745: Portable mode: false
+07:50:59 PM.766: OBS 0.0.1 (linux)
+07:50:59 PM.766: ---------------------------------
+07:50:59 PM.766: ---------------------------------
+07:50:59 PM.766: audio settings reset:
+07:50:59 PM.766: 	samples per sec: 44100
+07:50:59 PM.766: 	speakers:        2
+07:50:59 PM.773: ---------------------------------
+07:50:59 PM.773: Initializing OpenGL...
+07:50:59 PM.797: Loading up OpenGL on adapter Intel Open Source Technology Center Mesa DRI Intel(R) HD Graphics 620 (Kaby Lake GT2) 
+07:50:59 PM.797: OpenGL loaded successfully, version 4.5 (Core Profile) Mesa 18.3.6, shading language 4.50
+07:50:59 PM.819: ---------------------------------
+07:50:59 PM.819: video settings reset:
+07:50:59 PM.819: 	base resolution:   1920x1080
+07:50:59 PM.819: 	output resolution: 1280x720
+07:50:59 PM.819: 	downscale filter:  Bicubic
+07:50:59 PM.819: 	fps:               30/1
+07:50:59 PM.819: 	format:            NV12
+07:50:59 PM.819: 	YUV mode:          601/Partial
+07:50:59 PM.825: Audio monitoring device:
+07:50:59 PM.825: 	name: Default
+07:50:59 PM.825: 	id: default
+07:50:59 PM.825: ---------------------------------
+07:50:59 PM.896: No blackmagic support
+07:50:59 PM.930: [rtmp-services plugin] Remote update of URL "https://obsproject.com/obs2_update/rtmp-services/package.json" failed: Could not resolve host: obsproject.com
+07:50:59 PM.933: VLC found, VLC video source enabled
+07:50:59 PM.933: ---------------------------------
+07:50:59 PM.933:   Loaded Modules:
+07:50:59 PM.933:     vlc-video.so
+07:50:59 PM.933:     text-freetype2.so
+07:50:59 PM.933:     rtmp-services.so
+07:50:59 PM.933:     obs-x264.so
+07:50:59 PM.933:     obs-transitions.so
+07:50:59 PM.933:     obs-outputs.so
+07:50:59 PM.933:     obs-filters.so
+07:50:59 PM.933:     obs-ffmpeg.so
+07:50:59 PM.933:     linux-v4l2.so
+07:50:59 PM.933:     linux-pulseaudio.so
+07:50:59 PM.933:     linux-jack.so
+07:50:59 PM.933:     linux-decklink.so
+07:50:59 PM.933:     linux-capture.so
+07:50:59 PM.933:     linux-alsa.so
+07:50:59 PM.933:     image-source.so
+07:50:59 PM.933:     frontend-tools.so
+07:50:59 PM.933: ---------------------------------
+07:50:59 PM.933: ==== Startup complete ===============================================
+07:50:59 PM.933: Service '' not found
+07:50:59 PM.934: All scene data cleared
+07:50:59 PM.934: ------------------------------------------------
+07:50:59 PM.936: pulse-input: Server name: 'pulseaudio 12.2'
+07:50:59 PM.936: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+07:50:59 PM.936: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+07:50:59 PM.966: pulse-input: Server name: 'pulseaudio 12.2'
+07:50:59 PM.968: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+07:50:59 PM.968: pulse-input: Started recording from 'alsa_input.pci-0000_00_1f.3.analog-stereo'
+07:50:59 PM.969: Switched to scene 'Scene'
+07:50:59 PM.970: ------------------------------------------------
+07:50:59 PM.970: Loaded scenes:
+07:50:59 PM.970: - scene 'Scene':
+07:50:59 PM.970: ------------------------------------------------
+07:51:00 PM.484: adding 23 milliseconds of audio buffering, total audio buffering is now 23 milliseconds
+07:51:02 PM.065: adding 23 milliseconds of audio buffering, total audio buffering is now 46 milliseconds
+07:51:33 PM.981: xshm-input: Geometry 1920x1080 @ 0,0
+07:51:33 PM.994: User added source 'Screen Capture (XSHM)' (xshm_input) to scene 'Scene'
+07:51:52 PM.454: v4l2-input: Start capture from 
+07:51:52 PM.454: v4l2-input: Unable to open device
+07:51:52 PM.454: v4l2-input: Initialization failed
+07:51:52 PM.458: User added source 'Facecam' (v4l2_input) to scene 'Scene'
+07:51:52 PM.489: v4l2-input: /dev/video1 seems to not support video capture
+07:51:52 PM.493: v4l2-input: Found device 'Integrated Camera: Integrated C' at /dev/video0
+07:51:52 PM.495: v4l2-input: Found input 'Camera 1' (Index 0)
+07:51:52 PM.497: v4l2-input: Pixelformat: YUYV 4:2:2 (available)
+07:51:52 PM.497: v4l2-input: Pixelformat: Motion-JPEG (unavailable)
+07:51:52 PM.498: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+07:51:52 PM.498: v4l2-input: Pixelformat: BGR3 (Emulated) (unavailable)
+07:51:52 PM.498: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+07:51:52 PM.498: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+07:51:52 PM.501: v4l2-input: Stepwise and Continuous framesizes are currently hardcoded
+07:51:52 PM.504: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+07:51:52 PM.511: v4l2-input: Pixelformat: YUYV 4:2:2 (available)
+07:51:52 PM.512: v4l2-input: Pixelformat: Motion-JPEG (unavailable)
+07:51:52 PM.512: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+07:51:52 PM.512: v4l2-input: Pixelformat: BGR3 (Emulated) (unavailable)
+07:51:52 PM.512: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+07:51:52 PM.512: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+07:51:52 PM.513: v4l2-input: Stepwise and Continuous framesizes are currently hardcoded
+07:51:52 PM.515: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+07:51:52 PM.522: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+07:51:52 PM.525: v4l2-input: Start capture from /dev/video0
+07:51:52 PM.527: v4l2-input: Input: 0
+07:51:52 PM.551: v4l2-input: Resolution: 640x480
+07:51:52 PM.551: v4l2-input: Pixelformat: VYUY
+07:51:52 PM.551: v4l2-input: Linesize: 1280 Bytes
+07:51:52 PM.551: v4l2-input: Framerate: 30.00 fps
