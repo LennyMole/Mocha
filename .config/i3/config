@@ -1,4 +1,6 @@
+
 set $mod Mod4
+set $term kitty
 
 #bind $mod+esc to shutdown dmenu
 bindsym $mod+Escape exec --no-startup-id "bash ~/.config/shutdown.bash"
@@ -15,6 +17,9 @@ exec dunst
 
 #emoji dmenu:
 bindsym $mod+o exec --no-startup-id "rofimoji"
+
+#pass dmenu
+bindsym $mod+p exec --no-startup-id "rofi-pass"
 
 #resize by drawing region
 bindsym $mod+e --release exec --no-startup-id "bash /bin/draw-resize.sh $(xdotool getactivewindow)"
@@ -49,10 +54,10 @@ floating_modifier $mod
 
 #MAKE CERTAIN WINDOWS FLOATING BY DEFAULT
 for_window [class="SpeedCrunch"] floating enable
-for_window [class="nemo"] floating enable
+for_window [class="Files"] floating enable
 
-# start a terminal (kitty)
-bindsym $mod+Return exec kitty
+# start a terminal ($term)
+bindsym $mod+Return exec --no-startup-id $term
 
 # kill focused window
 bindsym $mod+q kill
