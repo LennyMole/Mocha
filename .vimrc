@@ -1,4 +1,5 @@
 set nocompatible "be IMproved
+
 filetype off
 
 "//Set PATH to include Vundle 
@@ -29,17 +30,17 @@ Plugin 'w0ng/vim-hybrid'								"hybrid colorscheme
 
 Plugin 'challenger-deep-theme/vim'			"challeger_deep colorscheme
 
-Plugin 'vim-latex/vim-latex'						"Vim LateX editor plugin
-
-Plugin 'lervag/vimtex'									"Syntax Highlighting for LateX
-
-Plugin 'xuhdev/vim-latex-live-preview'	"Live latex preview
-
 Plugin 'mboughaba/i3config.vim'					"i3 syntax
 
 Plugin 'plasticboy/vim-markdown'				"vim markdown
 
 Plugin 'conornewton/vim-pandoc-markdown-preview'
+
+Plugin 'sheerun/vim-polyglot'						"Shitload of syntax
+
+Plugin 'skywind3000/asyncrun.vim'				"Asyn support for vim
+
+Plugin 'hugolgst/vimsence'							"Discord presence :D
 "//
 
 "//End Vundle
@@ -54,15 +55,15 @@ filetype plugin on
 "//Give clang the control
 "let g:ycm_clang_uses_ycmd_caching = 0
 "//Use the system's own Clang !!!
-"let g:ycm_clang_binary_path = exepath("clang")
+let g:ycm_clang_binary_path = exepath("clang")
 
 "//YCM specific
 
 "	set automatic LaTeX completion
-if !exists('g:ycm_semantic_triggers')
-	let g:ycm_semantic_triggers = {}
-endif
-au VimEnter * let g:ycm_semantic_triggers.tex=g:vimtex#re#youcompleteme
+"	if !exists('g:ycm_semantic_triggers')
+"	let g:ycm_semantic_triggers = {}
+"	endif
+"	au VimEnter * let g:ycm_semantic_triggers.tex=g:vimtex#re#youcompleteme
 
 "close preview after autocompletion
 let g:ycm_autoclose_preview_window_after_insertion=1
@@ -91,6 +92,7 @@ set visualbell									"no beeps ffs
 set hlsearch										"set highlighted search
 set noswapfile 									"no swapfiles
 set laststatus=2								"Make filenames always visible!
+set backspace=indent,eol,start 	"Fix retarded backspace behaviour
 
 "//syntax on
 syntax on
